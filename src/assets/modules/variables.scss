@@ -1,0 +1,82 @@
+@import './mixin.scss';
+
+// Colors variables
+$primary: #F76746;
+$secondary: #BEBEBE;
+$platinumGray: #797979;
+$eclipseGray: #383737;
+
+// Color classes
+$colours: (
+  'primary' $primary,
+  'secondary' $secondary,
+  'platinumGray' $platinumGray,
+  'eclipseGray' $eclipseGray
+);
+
+// Color Function
+@each $i in $colours {
+  //bg-*
+  .bg-#{nth($i,1)} {
+    background-color: nth($i, 2);
+  }
+  //text-*
+  .text-#{nth($i, 1)} {
+    color: nth($i, 2);
+  }
+}
+
+//font-size
+$xSmall: 12px;
+$small: 14px;
+$regular: 16px;
+$medium: 18px;
+$large: 20px;
+$xlarge: 22px;
+$xxlarge: 24px;
+$xxxlarge: 30px;
+$xxxxlarge: 48px;
+
+// fonts weight
+$fw100: 100;
+$fw400: 400;
+$fw500: 500;
+$fw600: 600;
+$fw700: 700;
+$fwbold: bold;
+
+// font weight classes
+.fw100 {
+  font-weight: $fw100;
+}
+.fw400 {
+  font-weight: $fw400;
+}
+.fw500 {
+  font-weight: $fw500;
+}
+.fw600 {
+  font-weight: $fw600;
+}
+.fw700 {
+  font-weight: $fw700;
+}
+.fwbold {
+  font-weight: $fwbold;
+}
+
+//Font-Size;
+$unit: (
+  rem: 'rem',
+);
+
+// font size function
+$baseFontSize: 16;
+@for $size from 10 to 90 {
+  @each $unit, $ut in $unit {
+    //.fs-12
+    .fs-#{$size} {
+      font-size: #{calc($size/$baseFontSize)}#{$ut};
+    }
+  }
+}
