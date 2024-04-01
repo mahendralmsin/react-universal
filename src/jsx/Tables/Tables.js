@@ -8,13 +8,12 @@ import Avatar from "./../../assets/images/johndoe.jpg";
 /**
  * Name:Table
  * Desc: Render Table
- * @param {string} src
- * @param {string} title
+ * @param {string} avtSrc
  * @param {string} className
  * @param {string} text
  */
 
-const Tables = ({ className, ...rest }) => {
+const Tables = ({ avtSrc, text, className, ...rest }) => {
   return (
     <Table responsive striped bordered hover>
       <thead>
@@ -29,11 +28,7 @@ const Tables = ({ className, ...rest }) => {
       <tbody>
         <tr>
           <td style={{ maxWidth: "42px" }}>
-            <Image
-              
-              src={Avatar}
-              className="avatar"
-            />
+            <Image src={Avatar} className="avatar" />
           </td>
           <td>John Doe</td>
           <td>123 Main St Anytown, USA</td>
@@ -54,11 +49,7 @@ const Tables = ({ className, ...rest }) => {
         </tr>
         <tr>
           <td style={{ maxWidth: "42px" }}>
-            <Image
-              
-              src={Avatar}
-              className="avatar"
-            />
+            <Image src={Avatar} className="avatar" />
           </td>
           <td>John Doe</td>
           <td>123 Main St Anytown, USA</td>
@@ -79,11 +70,7 @@ const Tables = ({ className, ...rest }) => {
         </tr>
         <tr>
           <td style={{ maxWidth: "42px" }}>
-            <Image
-              
-              src={Avatar}
-              className="avatar"
-            />
+            <Image src={Avatar} className="avatar" />
           </td>
           <td>John Doe</td>
           <td>123 Main St Anytown, USA</td>
@@ -109,7 +96,7 @@ const Tables = ({ className, ...rest }) => {
 
 Tables.propTypes = {
   className: PropTypes.string,
-
+  avtSrc: PropTypes.string,
 };
 
 export default Tables;
