@@ -1,6 +1,10 @@
 import React from 'react';
 import './App.scss';
 
+import Tables from "./jsx/Tables/Tables";
+import { Container } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 function App() {
   return (
     <div className="App">
@@ -13,6 +17,9 @@ function App() {
           variables and mixins for enhanced styling capabilities.
         </p>
       </header>
+      <Container>
+        <Tables />
+      </Container>
     </div>
   );
 }
